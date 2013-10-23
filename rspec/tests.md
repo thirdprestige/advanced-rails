@@ -9,6 +9,29 @@ title: Advanced Ruby on Rails
 
 Capybara is a driver for basically mocking a web browser in Ruby.
 
+## Installation
+
+Add to your Gemfile: 
+
+<pre>
+group :test do
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'cucumber-rails', require: false
+  gem 'database-cleaner'
+end
+</pre>
+
+## Issues with OS X
+
+In OS X, installation sometimes fails without the `qt` library.  Homebrew helps us out:
+
+`brew install qt`
+
+More information in [this GitHub issue](https://github.com/thoughtbot/capybara-webkit/issues/521). 
+
+Wrap it all up with `bundle install`, then `rails generate cucumber:install`.
+
 ## Examples
  
 Example `features/sign_up.feature`:
@@ -139,3 +162,19 @@ end
 </pre>
 
 
+## Handling AJAX with Cucumber
+
+Easy enough. Throw this in `features/support/ajax.rb`:
+
+<pre>
+def wait_for_ajax
+  Timeout.timeout(Capybara.default_wait_time) do
+    active = page.evaluate_script('jQuery.active')
+    until active == 0
+      active = page.evaluate_script('jQuery.active')
+    end
+  end
+end
+</pre>
+
+**[Next: Debugging Cucumber with Launchy](/rspec/debugging-cucumber.html)**

@@ -7,23 +7,28 @@ title: Advanced Ruby on Rails
 
 > Guard is a command line tool to easily handle events on file system modifications.
 
-<pre>
-guard init rspec
-guard init livereload
-guard
-</pre>
-
 ## Gemfile
 
 <pre>
+group :development do
   gem 'guard-bundler'
   gem 'guard-cucumber'
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'guard-sidekiq'
   gem 'guard-unicorn', git: 'git@github.com:suranyami/guard-unicorn.git'
+  gem 'terminal-notifier-guard', require: RUBY_PLATFORM.include?('darwin') &amp;&amp; 'terminal-notifier-guard'
+
+end
 </pre>
 
+## Initialize
+
+<pre>
+guard init rspec
+guard init livereload
+guard
+</pre>
 
 ## A Sample Guardfile
 
