@@ -20,6 +20,8 @@ title: Advanced Ruby on Rails
 <!-- * [RSpec for `lib/`](/rspec/libs.html) -->
 * [Mocks](/rspec/mocks.html)
 * [Writing Cucumber tests](/rspec/tests.html)
+* [Using Guard with Rails](/rspec/guard.html)
+
 
 ## More Resources on Testing
 
