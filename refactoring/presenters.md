@@ -59,4 +59,4 @@ There are several reasons views are preferred, if your database engine supports 
 * [Model-view-presenter, Wikipedia](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter)
 * [Decorators vs. Presenters, StackOverflow](http://stackoverflow.com/questions/7860301/rails-patterns-decorator-vs-presenter)
 
-**[Next: Command Pattern](command-pattern.html)**
+**[Next: Command Pattern](commands.html)**

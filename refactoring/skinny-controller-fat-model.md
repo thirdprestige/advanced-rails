@@ -106,7 +106,7 @@ Alright, saved us a few lines.
 
 Let's jump over the `attendance.attendee_id =` line for the moment.  That makes sense for now. What about this `attendee_role_id = Role.find_by(name: 'volunteer').id` stuff, though? That seems like a bit much.
 
-#### Add an Assocation
+#### Add an Association
 
 Here's what we have in the `Event` model: 
 
@@ -200,4 +200,4 @@ They all need to look up a resource by the `params[:id]`.
 Refactor the `Event.find` call into a `before_filter` named `load_event`.
 
 
-**[Next: Presenters](/refactorings/presenters.html)**
+**[Next: Presenters](/refactoring/presenters.html)**
