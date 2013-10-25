@@ -87,6 +87,12 @@ Definitely check out _Refactoring: Ruby Edition_, if it's the only one in the li
 * [Strong Parameters](http://weblog.rubyonrails.org/2012/3/21/strong-parameters/)
 * [Rails Tip #7: Mass Assignment Security](http://excid3.com/blog/rails-tip-7-mass-assignment-security/)
 
+## Deployment 
+
+* [Airbrake.io](http://airbrake.io)
+* [Airbrake JS](https://github.com/airbrake/airbrake-js)
+* [Airbrake Resque](https://github.com/Viximo/airbrake-resque), asynchronous error reporting
+
 ## APIs
 
 * [Rest-Client gem](https://github.com/rest-client/rest-client)
